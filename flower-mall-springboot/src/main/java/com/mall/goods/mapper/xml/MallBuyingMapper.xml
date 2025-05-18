@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mall.goods.mapper.MallBuyingMapper">
+
+    <select id="queryPage" resultType="com.mall.goods.entity.vo.MallBuyingVo">
+        select ga.*,bg.tender
+        from (select buying_id, count(1) as tender
+              from buying_goods
+              group by buying_id) bg
+                 right join
+             (select buy.*, mgi.img_url
+              from mall_buying buy
+                       left join mall_goods_img mgi on buy.id = mgi.goods_id
+              where mgi.img_type = 1) ga on ga.id=bg.buying_id group by ga.create_time
+    </select>
+</mapper>

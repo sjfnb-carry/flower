@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mall.sys.mapper.MallMenuMapper">
+
+    <select id="getListMode" resultType="com.mall.sys.entity.vo.MallMenuVo">
+        select menu.menu_code,menu.icon,menu.menu_path,menu.parent_id,menu.sort,menu.menu_name,menu.id
+        from mall_menu as menu
+                 join
+             mall_sys_role as role
+                 join
+             mall_menu_role as smr
+             on menu.menu_code = smr.menu_code and smr.role_id = role.id
+        where role.id = #{roleId} and menu.is_btn= 0 and menu.is_deleted=0 ORDER BY menu.sort ASC;
+    </select>
+
+
+    <select id="getAllBtn" resultType="java.lang.String">
+        select menu.menu_path
+        from
+            mall_menu as menu
+                join
+            mall_sys_role as role
+                join
+            mall_menu_role as smr
+            on
+                    menu.menu_code = smr.menu_code
+                    and
+                    smr.role_id = role.id
+        where
+            role.id = #{roleId} and  menu.is_btn=1 and menu.is_deleted=0;
+    </select>
+    <select id="findMenuAll" resultType="com.mall.sys.entity.vo.MallMenuVo">
+        select *
+        from
+            mall_menu where is_deleted=0;
+    </select>
+    <select id="getByModel" resultType="com.mall.sys.entity.vo.MallMenuGet">
+        select sm.*, sm2.menu_name as parent_name
+        from mall_menu sm
+                 left join mall_menu sm2
+                           on sm.parent_id = sm2.menu_code
+        where sm.id=#{id}
+    </select>
+    <select id="maxModel" resultType="java.lang.String">
+        select MAX(menu_code) from mall_menu where parent_id=#{pId};
+    </select>
+
+</mapper>

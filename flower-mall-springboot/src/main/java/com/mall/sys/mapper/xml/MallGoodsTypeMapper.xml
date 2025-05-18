@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mall.sys.mapper.MallGoodsTypeMapper">
+
+    <resultMap id="OrderResultMap" type="com.mall.sys.entity.vo.MallGoodsTypeVo">
+        <result property="id" column="cid"></result>
+        <collection property="goodsList"
+                    column="cid"
+                    ofType="com.mall.sys.entity.MallGoods"
+                    select="com.mall.sys.mapper.MallGoodsMapper.getMallGoodsList">
+
+        </collection>
+    </resultMap>
+
+    <select id="getMallGoodsTypeVo" resultMap="OrderResultMap">
+        select id as cid, type_name, img_type, status, sort, create_time, is_home
+        from mall_goods_type
+        where is_home = 1
+        order by sort desc
+    </select>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mall.goods.mapper.TopUpMapper">
+
+    <select id="getTopUpList" resultType="com.mall.goods.entity.TopUp">
+        select * from goods_top_up where user_id=#{id} order by gmt_create
+    </select>
+
+
+    <update id="uptGoodsUserAccount">
+        update goods_user_account
+        set money=money +
+                  (select case when max(goods_top_up_money) is null then 0 else goods_top_up_money end money
+                   from goods_top_up
+                   where goods_top_up.account_id = #{topUp.accountId}
+                     and is_pay = 2
+                     and id = #{topUp.id})
+        where id = #{topUp.accountId};
+
+    </update>
+</mapper>
