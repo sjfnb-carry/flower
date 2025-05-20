@@ -1,0 +1,435 @@
+<template>
+<view class="content">
+<view :style='{"width":"100%","padding":"0px 12px 42px 12px","position":"relative","background":"#F6F4F5","height":"100%"}'>
+<form :style='{"width":"100%","padding":"12px 12px 92px 12px","margin":"0 0  20px   0 ","background":"#FFFFFF","display":"block","height":"auto"}' class="app-update-pv">
+<view :style='{"border":"0","padding":"6px 0 6px 0","margin":"0 0 12px 0","borderColor":"#ccc","alignItems":"center","color":"#211B1D","display":"flex","borderRadius":"5px","borderWidth":"0 0 1px 0","background":"#F6F4F5","width":"100%","fontSize":"14px","borderStyle":"solid","height":"auto"}' class="">
+<view :style='{"width":"80px","padding":"0 10px 0 0","lineHeight":"40px","fontSize":"14px","color":"#333","textAlign":"right"}' class="title">用户姓名</view>
+<input :style='{"border":"0","padding":"0px 12px 0px 12px","margin":"0 0 0 0","color":"#000","borderRadius":"4px","flex":"1","background":"#ffffff00","fontSize":"14px","height":"40px"}' :disabled="ro.yonghuxingming" v-model="ruleForm.yonghuxingming" placeholder="用户姓名"></input>
+</view>
+<view :style='{"border":"0","padding":"6px 0 6px 0","margin":"0 0 12px 0","borderColor":"#ccc","alignItems":"center","color":"#211B1D","display":"flex","borderRadius":"5px","borderWidth":"0 0 1px 0","background":"#F6F4F5","width":"100%","fontSize":"14px","borderStyle":"solid","height":"auto"}' class="">
+<view :style='{"width":"80px","padding":"0 10px 0 0","lineHeight":"40px","fontSize":"14px","color":"#333","textAlign":"right"}' class="title">年龄</view>
+<input :style='{"border":"0","padding":"0px 12px 0px 12px","margin":"0 0 0 0","color":"#000","borderRadius":"4px","flex":"1","background":"#ffffff00","fontSize":"14px","height":"40px"}' :disabled="ro.nianling" v-model="ruleForm.nianling" placeholder="年龄"></input>
+</view>
+<view :style='{"border":"0","padding":"6px 0 6px 0","margin":"0 0 12px 0","borderColor":"#ccc","alignItems":"center","color":"#211B1D","display":"flex","borderRadius":"5px","borderWidth":"0 0 1px 0","background":"#F6F4F5","width":"100%","fontSize":"14px","borderStyle":"solid","height":"auto"}' class="">
+<view :style='{"width":"80px","padding":"0 10px 0 0","lineHeight":"40px","fontSize":"14px","color":"#333","textAlign":"right"}' class="title">联系方式</view>
+<input :style='{"border":"0","padding":"0px 12px 0px 12px","margin":"0 0 0 0","color":"#000","borderRadius":"4px","flex":"1","background":"#ffffff00","fontSize":"14px","height":"40px"}' :disabled="ro.lianxifangshi" v-model="ruleForm.lianxifangshi" placeholder="联系方式"></input>
+</view>
+<view :style='{"border":"0","padding":"6px 0 6px 0","margin":"0 0 12px 0","borderColor":"#ccc","alignItems":"center","color":"#211B1D","display":"flex","borderRadius":"5px","borderWidth":"0 0 1px 0","background":"#F6F4F5","width":"100%","fontSize":"14px","borderStyle":"solid","height":"auto"}' class="">
+<view :style='{"width":"80px","padding":"0 10px 0 0","lineHeight":"40px","fontSize":"14px","color":"#333","textAlign":"right"}' class="title">账号</view>
+<input :style='{"border":"0","padding":"0px 12px 0px 12px","margin":"0 0 0 0","color":"#000","borderRadius":"4px","flex":"1","background":"#ffffff00","fontSize":"14px","height":"40px"}' :disabled="ro.zhanghao" v-model="ruleForm.zhanghao" placeholder="账号"></input>
+</view>
+<view :style='{"border":"0","padding":"6px 0 6px 0","margin":"0 0 12px 0","borderColor":"#ccc","alignItems":"center","color":"#211B1D","display":"flex","borderRadius":"5px","borderWidth":"0 0 1px 0","background":"#F6F4F5","width":"100%","fontSize":"14px","borderStyle":"solid","height":"auto"}' class="">
+<view :style='{"width":"80px","padding":"0 10px 0 0","lineHeight":"40px","fontSize":"14px","color":"#333","textAlign":"right"}' class="title">密码</view>
+<input :style='{"border":"0","padding":"0px 12px 0px 12px","margin":"0 0 0 0","color":"#000","borderRadius":"4px","flex":"1","background":"#ffffff00","fontSize":"14px","height":"40px"}' :disabled="ro.mima" v-model="ruleForm.mima" placeholder="密码"></input>
+</view>
+<view :style='{"border":"0","padding":"6px 0 6px 0","margin":"0 0 12px 0","borderColor":"#ccc","alignItems":"center","color":"#211B1D","display":"flex","borderRadius":"5px","borderWidth":"0 0 1px 0","background":"#F6F4F5","width":"100%","fontSize":"14px","borderStyle":"solid","height":"auto"}' class="" @tap="touxiangTap">
+<view :style='{"width":"80px","padding":"0 10px 0 0","lineHeight":"40px","fontSize":"14px","color":"#333","textAlign":"right"}' class="title">头像</view>
+<image :style='{"width":"40px","borderRadius":"100%","objectFit":"cover","display":"block","height":"40px"}' class="avator" v-if="ruleForm.touxiang" :src="baseUrl+ruleForm.touxiang.split(',')[0]" mode="aspectFill"></image>
+<image :style='{"width":"40px","borderRadius":"100%","objectFit":"cover","display":"block","height":"40px"}' class="avator" v-else src="../../static/gen/upload.png" mode="aspectFill"></image>
+</view>
+<view :style='{"border":"0","padding":"6px 0 6px 0","margin":"0 0 12px 0","borderColor":"#ccc","alignItems":"center","color":"#211B1D","display":"flex","borderRadius":"5px","borderWidth":"0 0 1px 0","background":"#F6F4F5","width":"100%","fontSize":"14px","borderStyle":"solid","height":"auto"}' class="">
+<view :style='{"width":"80px","padding":"0 10px 0 0","lineHeight":"40px","fontSize":"14px","color":"#333","textAlign":"right"}' class="title">积分</view>
+<input :style='{"border":"0","padding":"0px 12px 0px 12px","margin":"0 0 0 0","color":"#000","borderRadius":"4px","flex":"1","background":"#ffffff00","fontSize":"14px","height":"40px"}' :disabled="ro.jf" v-model="ruleForm.jf" placeholder="积分"></input>
+</view>
+<view :style='{"border":"0","padding":"6px 0 6px 0","margin":"0 0 12px 0","borderColor":"#ccc","alignItems":"center","color":"#211B1D","display":"flex","borderRadius":"5px","borderWidth":"0 0 1px 0","background":"#F6F4F5","width":"100%","fontSize":"14px","borderStyle":"solid","height":"auto"}' class="">
+<view :style='{"width":"80px","padding":"0 10px 0 0","lineHeight":"40px","fontSize":"14px","color":"#333","textAlign":"right"}' class="title">余额</view>
+<input :style='{"border":"0","padding":"0px 12px 0px 12px","margin":"0 0 0 0","color":"#000","borderRadius":"4px","flex":"1","background":"#ffffff00","fontSize":"14px","height":"40px"}' :disabled="ro.money" v-model="ruleForm.money" placeholder="余额"></input>
+</view>
+
+<!-- 否 -->
+<!-- 否 评价 -->
+
+<view :style='{"width":"100%","flexWrap":"wrap","display":"flex","height":"auto"}' class="btn" >
+<button :style='{"border":"0","padding":"0 0 0 0","margin":"10px 0","color":"#fff","borderRadius":"4px","background":"#F8678C","width":"100%","lineHeight":"44px","fontSize":"16px","height":"44px"}' @tap="onSubmitTap" class="bg-red">提交</button>
+</view>
+</form>
+
+</view>
+</view>
+</template>
+
+<script>
+import wPicker from "@/components/w-picker/w-picker.vue";
+import xiaEditor from '@/components/xia-editor/xia-editor';
+import multipleSelect from "@/components/momo-multipleSelect/momo-multipleSelect";
+export default {
+data() {
+return {
+cross:'',
+ruleForm: {
+
+yonghuxingming: '',
+nianling:0,
+
+lianxifangshi: '',
+
+zhanghao: '',
+
+mima: '',
+
+touxiang: '',
+jf:0,
+money:0,
+},
+// 登录用户信息
+user: {},
+ro:{
+yonghuxingming : false,
+nianling : false,
+lianxifangshi : false,
+zhanghao : false,
+mima : false,
+touxiang : false,
+jf : false,
+money : false,
+},
+}
+},
+components: {
+wPicker,
+xiaEditor,
+multipleSelect
+},
+watch:{
+},
+computed: {
+baseUrl() {
+return this.$base.url;
+},
+
+
+
+},
+async onLoad(options) {
+
+let table = uni.getStorageSync("nowTable");
+// 获取用户信息
+let res = await this.$api.session(table);
+this.user = res.data;
+
+// ss读取
+
+
+
+// 如果有登录，获取登录后保存的userid
+this.ruleForm.userid = uni.getStorageSync("userid")
+if (options.refid) {
+// 如果上一级页面传递了refid，获取改refid数据信息
+this.ruleForm.refid = options.refid;
+this.ruleForm.nickname = uni.getStorageSync("nickname");
+}
+// 如果是更新操作
+if (options.id) {
+this.ruleForm.id = options.id;
+// 获取信息
+res = await this.$api.info(`yonghu`, this.ruleForm.id);
+this.ruleForm = res.data;
+}
+// 跨表
+this.cross = options.cross;
+if(options.cross){
+var obj = uni.getStorageSync('crossObj');
+for (var o in obj){
+if(o=='yonghuxingming'){
+this.ruleForm.yonghuxingming = obj[o];
+this.ro.yonghuxingming = true;
+continue;
+}
+if(o=='nianling'){
+this.ruleForm.nianling = obj[o];
+this.ro.nianling = true;
+continue;
+}
+if(o=='lianxifangshi'){
+this.ruleForm.lianxifangshi = obj[o];
+this.ro.lianxifangshi = true;
+continue;
+}
+if(o=='zhanghao'){
+this.ruleForm.zhanghao = obj[o];
+this.ro.zhanghao = true;
+continue;
+}
+if(o=='mima'){
+this.ruleForm.mima = obj[o];
+this.ro.mima = true;
+continue;
+}
+if(o=='touxiang'){
+this.ruleForm.touxiang = obj[o].split(",")[0];
+this.ro.touxiang = true;
+continue;
+}
+if(o=='jf'){
+this.ruleForm.jf = obj[o];
+this.ro.jf = true;
+continue;
+}
+if(o=='money'){
+this.ruleForm.money = obj[o];
+this.ro.money = true;
+continue;
+}
+}
+}
+this.styleChange()
+this.$forceUpdate()
+},
+methods: {
+styleChange() {
+this.$nextTick(()=>{
+document.querySelectorAll('.radioText').forEach(el => {
+el.removeAttribute('style')
+const icon = {"color":"#666"}
+Object.keys(icon).forEach((key) => {
+el.style[key] = icon[key]
+})
+})
+document.querySelectorAll('.radioTextActive').forEach(el => {
+el.removeAttribute('style')
+const icon = {"color":"#E9607F"}
+Object.keys(icon).forEach((key) => {
+el.style[key] = icon[key]
+})
+})
+document.querySelectorAll('.checkText').forEach(el => {
+el.removeAttribute('style')
+const icon = {"color":"#666"}
+Object.keys(icon).forEach((key) => {
+el.style[key] = icon[key]
+})
+})
+document.querySelectorAll('.checkTextActive').forEach(el => {
+el.removeAttribute('style')
+const icon = {"color":"#E9607F"}
+Object.keys(icon).forEach((key) => {
+el.style[key] = icon[key]
+})
+})
+document.querySelectorAll('.uni-radio-input').forEach(el => {
+el.removeAttribute('style')
+const icon = {"outlineColor":"#666","background":"#fff"}
+Object.keys(icon).forEach((key) => {
+el.style[key] = icon[key]
+})
+})
+document.querySelectorAll('.uni-radio-input-checked').forEach(el => {
+el.removeAttribute('style')
+const icon = {"outlineColor":"#E9607F","background":"#E9607F"}
+Object.keys(icon).forEach((key) => {
+el.style[key] = icon[key]
+})
+})
+document.querySelectorAll('.uni-checkbox-input').forEach(el => {
+el.removeAttribute('style')
+const icon = {"borderColor":"#666","background":"#fff"}
+Object.keys(icon).forEach((key) => {
+el.style[key] = icon[key]
+})
+})
+document.querySelectorAll('.uni-checkbox-input-checked').forEach(el => {
+el.removeAttribute('style')
+const icon = {"color":"#fff","borderColor":"#E9607F","background":"#E9607F"}
+Object.keys(icon).forEach((key) => {
+el.style[key] = icon[key]
+})
+})
+})
+},
+
+// 多级联动参数
+
+
+
+
+touxiangTap() {
+let _this = this;
+this.$api.upload(function(res) {
+_this.ruleForm.touxiang = 'file/' + res.file;
+_this.$forceUpdate();
+_this.$nextTick(()=>{
+_this.styleChange()
+})
+});
+},
+
+getUUID () {
+return new Date().getTime();
+},
+async onSubmitTap() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//跨表计算判断
+var obj;
+if((!this.ruleForm.yonghuxingming)){
+this.$utils.msg(`用户姓名不能为空`);
+return
+}
+
+if((!this.ruleForm.nianling)){
+this.$utils.msg(`年龄不能为空`);
+return
+}
+if(this.ruleForm.nianling&&(!this.$validate.isIntNumer(this.ruleForm.nianling))){
+this.$utils.msg(`年龄应输入整数`);
+return
+}
+// // if(this.ruleForm.nianling<=0){
+// this.$utils.msg(`年龄不能为零`);
+// return
+// }
+// 
+
+if((!this.ruleForm.lianxifangshi)){
+this.$utils.msg(`联系方式不能为空`);
+return
+}
+
+if(this.ruleForm.lianxifangshi&&(!this.$validate.isMobile(this.ruleForm.lianxifangshi))){
+this.$utils.msg(`联系方式应输入手机格式`);
+return
+}
+if((!this.ruleForm.zhanghao)){
+this.$utils.msg(`账号不能为空`);
+return
+}
+
+if((!this.ruleForm.mima)){
+this.$utils.msg(`密码不能为空`);
+return
+}
+
+
+if(this.ruleForm.jf&&(!this.$validate.isNumber(this.ruleForm.jf))){
+this.$utils.msg(`积分应输入数字`);
+return
+}
+
+if(this.ruleForm.jf<=0){
+this.$utils.msg(`积分不能为零`);
+return
+}
+
+if(this.ruleForm.money&&(!this.$validate.isNumber(this.ruleForm.money))){
+this.$utils.msg(`余额应输入数字`);
+return
+}
+
+if(this.ruleForm.money<=0){
+this.$utils.msg(`余额不能为零`);
+return
+}
+
+//更新跨表属性
+var crossuserid;
+var crossrefid;
+var crossoptnum;
+if(this.cross){
+uni.setStorageSync('crossCleanType',true);
+var statusColumnName = uni.getStorageSync('statusColumnName');
+var statusColumnValue = uni.getStorageSync('statusColumnValue');
+if(statusColumnName!='') {
+if(!obj) {
+obj = uni.getStorageSync('crossObj');
+}
+if(!statusColumnName.startsWith("[")) {
+for (var o in obj){
+if(o==statusColumnName){
+obj[o] = statusColumnValue;
+}
+
+}
+var table = uni.getStorageSync('crossTable');
+await this.$api.update(`${table}`, obj);
+} else {
+crossuserid=Number(uni.getStorageSync('userid'));
+crossrefid=obj['id'];
+crossoptnum=uni.getStorageSync('statusColumnName');
+crossoptnum=crossoptnum.replace(/\[/,"").replace(/\]/,"");
+}
+}
+}
+if(crossrefid && crossuserid) {
+this.ruleForm.crossuserid=crossuserid;
+this.ruleForm.crossrefid=crossrefid;
+let params = {
+page: 1,
+limit:10,
+crossuserid:crossuserid,
+crossrefid:crossrefid,
+}
+let res = await this.$api.list(`yonghu`, params);
+if (res.data.total >= crossoptnum) {
+this.$utils.msg(uni.getStorageSync('tips'));
+uni.removeStorageSync('crossCleanType');
+return false;
+} else {
+//跨表计算
+if(this.ruleForm.id){
+await this.$api.update(`yonghu`, this.ruleForm);
+}else{
+await this.$api.add(`yonghu`, this.ruleForm);
+}
+this.$utils.msgBack('提交成功');
+}
+} else {
+//跨表计算
+if(this.ruleForm.id){
+await this.$api.update(`yonghu`, this.ruleForm);
+}else{
+await this.$api.add(`yonghu`, this.ruleForm);
+}
+this.$utils.msgBack('提交成功');
+}
+},
+optionsChange(e) {
+this.index = e.target.value
+},
+bindDateChange(e) {
+this.date = e.target.value
+},
+getDate(type) {
+const date = new Date();
+let year = date.getFullYear();
+let month = date.getMonth() + 1;
+let day = date.getDate();
+if (type === 'start') {
+year = year - 60;
+} else if (type === 'end') {
+year = year + 2;
+}
+month = month > 9 ? month : '0' + month;;
+day = day > 9 ? day : '0' + day;
+return `${year}-${month}-${day}`;
+},
+toggleTab(str) {
+	if(this.ro[str]){
+		return false
+	}
+this.$refs[str].show();
+},
+}
+}
+</script>
+
+<style lang="scss" scoped>
+.content {
+min-height: calc(100vh - 44px);
+box-sizing: border-box;
+}
+</style>

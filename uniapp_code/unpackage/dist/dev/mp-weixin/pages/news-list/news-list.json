@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#E9607F",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "营销与推广",
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni"
+  }
+}

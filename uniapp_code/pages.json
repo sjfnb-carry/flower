@@ -1,0 +1,284 @@
+{
+	"pages": [{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "首页"
+		}
+	},{
+		"path": "pages/login/login",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "登录"
+		}
+	}, {
+		"path": "pages/register/register",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "注册"
+		}
+	}, {
+		"path": "pages/forget/forget",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "忘记密码"
+		}
+	}, {
+		"path": "pages/center/center",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "我的"
+		}
+	}, {
+		"path": "pages/user-info/user-info",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "用户信息"
+		}
+	}
+	, {
+		"path": "pages/shop-recharge/recharge",
+		"style": {
+			"navigationBarTitleText": "用户充值"
+		}
+	},{
+                "path": "pages/shop-recharge/pay-confirm",
+                "style": {
+                        "navigationBarTitleText": "选择充值方式"
+                }
+        }, {
+		"path": "pages/shop-cart/shop-cart",
+		"style": {
+			"navigationBarTitleText": "购物车"
+		}
+	}, {
+		"path": "pages/shop-order-confirm/shop-order-confirm",
+		"style": {
+			"navigationBarTitleText": "订单确认"
+		}
+	}, {
+		"path": "pages/shop-address/shop-address",
+		"style": {
+			"navigationBarTitleText": "我的地址"
+		}
+	}, {
+		"path": "pages/shop-address-detail/shop-address-detail",
+		"style": {
+			"navigationBarTitleText": "地址详情"
+		}
+	}, {
+		"path": "pages/shop-order/shop-order",
+		"style": {
+			"navigationBarTitleText": "我的订单"
+		}
+	}, {
+        "path": "pages/shop-order/logistics",
+        "style": {
+            "navigationBarTitleText": "物流信息"
+        }
+    }
+	,{
+		"path": "pages/yonghu/list",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	},{
+		"path": "pages/yonghu/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	},{
+		"path": "pages/yonghu/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	}
+	,{
+		"path": "pages/shangjia/list",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	},{
+		"path": "pages/shangjia/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	},{
+		"path": "pages/shangjia/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	}
+	,{
+		"path": "pages/shangpinfenlei/list",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	},{
+		"path": "pages/shangpinfenlei/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	},{
+		"path": "pages/shangpinfenlei/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	}
+	,{
+		"path": "pages/shangpin/list",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	},{
+		"path": "pages/shangpin/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	},{
+		"path": "pages/shangpin/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	}
+	,{
+		"path": "pages/storeup/list",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	}
+	,{
+		"path": "pages/xitonggonggao/list",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	},{
+		"path": "pages/xitonggonggao/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	},{
+		"path": "pages/xitonggonggao/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	}
+	,{
+		"path": "pages/discussshangpin/list",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	},{
+		"path": "pages/discussshangpin/add-or-update",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	},{
+		"path": "pages/discussshangpin/detail",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+		}
+	}
+	, {
+		"path": "pages/news-list/news-list",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText":  "营销与推广"
+		}
+	}
+	, {
+		"path": "pages/news-detail/news-detail",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "营销与推广"
+		}
+	}
+	, {
+		"path": "pages/chat/chat",
+		"style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white",
+			"navigationBarTitleText": "售后服务"
+	    	}
+	}
+    ,{
+        "path": "common/linkOthers/linkOthers",
+        "style": {
+			"navigationBarBackgroundColor": "#E9607F",
+			"navigationBarTextStyle": "white"
+        }
+    }
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "基于微信小程序的海外拼团购物平台的设计和实现",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#000000",
+		"selectedColor": "#E9607F",
+		"borderStyle": "white",
+		"backgroundColor": "#FFFFFF",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabs/2/index.png",
+				"selectedIconPath": "static/tabs/2/index1.png",
+				"text": "首页"
+			}
+,{
+	"pagePath": "pages/shop-cart/shop-cart",
+	"iconPath": "static/tabs/2/cart.png",
+	"selectedIconPath": "static/tabs/2/cart1.png",
+	"text": "购物车"
+}
+,{
+"pagePath": "pages/shangpin/list",
+"iconPath": "/static/tabs/2/icon1.png",
+"selectedIconPath": "/static/tabs/2/icon1_act.png",
+"text": "商品"
+}
+,{
+"pagePath": "pages/xitonggonggao/list",
+"iconPath": "/static/tabs/2/icon2.png",
+"selectedIconPath": "/static/tabs/2/icon2_act.png",
+"text": "系统公告"
+}
+
+
+			,{
+				"pagePath": "pages/center/center",
+				"iconPath": "static/tabs/2/mine.png",
+				"selectedIconPath": "static/tabs/2/mine1.png",
+				"text": "我的"
+			}
+		]
+	}
+}

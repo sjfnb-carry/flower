@@ -1,0 +1,103 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/forget/forget",
+    "pages/center/center",
+    "pages/user-info/user-info",
+    "pages/shop-recharge/recharge",
+    "pages/shop-recharge/pay-confirm",
+    "pages/shop-cart/shop-cart",
+    "pages/shop-order-confirm/shop-order-confirm",
+    "pages/shop-address/shop-address",
+    "pages/shop-address-detail/shop-address-detail",
+    "pages/shop-order/shop-order",
+    "pages/shop-order/logistics",
+    "pages/yonghu/list",
+    "pages/yonghu/add-or-update",
+    "pages/yonghu/detail",
+    "pages/shangjia/list",
+    "pages/shangjia/add-or-update",
+    "pages/shangjia/detail",
+    "pages/shangpinfenlei/list",
+    "pages/shangpinfenlei/add-or-update",
+    "pages/shangpinfenlei/detail",
+    "pages/shangpin/list",
+    "pages/shangpin/add-or-update",
+    "pages/shangpin/detail",
+    "pages/storeup/list",
+    "pages/xitonggonggao/list",
+    "pages/xitonggonggao/add-or-update",
+    "pages/xitonggonggao/detail",
+    "pages/discussshangpin/list",
+    "pages/discussshangpin/add-or-update",
+    "pages/discussshangpin/detail",
+    "pages/news-list/news-list",
+    "pages/news-detail/news-detail",
+    "pages/chat/chat",
+    "common/linkOthers/linkOthers"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "基于微信小程序的海外拼团购物平台的设计和实现",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#E9607F",
+    "borderStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabs/2/index.png",
+        "selectedIconPath": "static/tabs/2/index1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/shop-cart/shop-cart",
+        "iconPath": "static/tabs/2/cart.png",
+        "selectedIconPath": "static/tabs/2/cart1.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/shangpin/list",
+        "iconPath": "/static/tabs/2/icon1.png",
+        "selectedIconPath": "/static/tabs/2/icon1_act.png",
+        "text": "商品"
+      },
+      {
+        "pagePath": "pages/xitonggonggao/list",
+        "iconPath": "/static/tabs/2/icon2.png",
+        "selectedIconPath": "/static/tabs/2/icon2_act.png",
+        "text": "系统公告"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "iconPath": "static/tabs/2/mine.png",
+        "selectedIconPath": "static/tabs/2/mine1.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取地址"
+    }
+  },
+  "requiredPrivateInfos": [
+    "chooseLocation",
+    "getLocation"
+  ],
+  "usingComponents": {
+    "uni-load-more": "/components/mescroll-uni/mescroll-uni",
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "z-swiper-item": "/components/zebra-swiper/components/z-swiper-item/z-swiper-item",
+    "z-swiper": "/components/zebra-swiper/components/z-swiper/z-swiper",
+    "music-play": "/components/musicPlay/musicPlay"
+  }
+}

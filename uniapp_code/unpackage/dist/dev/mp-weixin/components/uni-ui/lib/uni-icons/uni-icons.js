@@ -1,0 +1,11 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/uni-ui/lib/uni-icons/uni-icons"],{479:function(n,e,t){"use strict";t.r(e);var r=t(480),i=t(482);for(var u in i)["default"].indexOf(u)<0&&function(n){t.d(e,n,(function(){return i[n]}))}(u);t(485);var c,o=t(32),f=Object(o["default"])(i["default"],r["render"],r["staticRenderFns"],!1,null,"557ae8de",null,!1,r["components"],c);f.options.__file="components/uni-ui/lib/uni-icons/uni-icons.vue",e["default"]=f.exports},480:function(n,e,t){"use strict";t.r(e);var r=t(481);t.d(e,"render",(function(){return r["render"]})),t.d(e,"staticRenderFns",(function(){return r["staticRenderFns"]})),t.d(e,"recyclableRender",(function(){return r["recyclableRender"]})),t.d(e,"components",(function(){return r["components"]}))},481:function(n,e,t){"use strict";var r;t.r(e),t.d(e,"render",(function(){return i})),t.d(e,"staticRenderFns",(function(){return c})),t.d(e,"recyclableRender",(function(){return u})),t.d(e,"components",(function(){return r}));var i=function(){var n=this,e=n.$createElement;n._self._c},u=!1,c=[];i._withStripped=!0},482:function(n,e,t){"use strict";t.r(e);var r=t(483),i=t.n(r);for(var u in r)["default"].indexOf(u)<0&&function(n){t.d(e,n,(function(){return r[n]}))}(u);e["default"]=i.a},483:function(n,e,t){"use strict";var r=t(4);Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var i=r(t(484)),u={name:"UniIcons",props:{type:{type:String,default:""},color:{type:String,default:"#333333"},size:{type:[Number,String],default:16}},data:function(){return{icons:i.default}},methods:{_onClick:function(){this.$emit("click")}}};e.default=u},485:function(n,e,t){"use strict";t.r(e);var r=t(486),i=t.n(r);for(var u in r)["default"].indexOf(u)<0&&function(n){t.d(e,n,(function(){return r[n]}))}(u);e["default"]=i.a},486:function(n,e,t){}}]);
+//# sourceMappingURL=../../../../../.sourcemap/mp-weixin/components/uni-ui/lib/uni-icons/uni-icons.js.map
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/uni-ui/lib/uni-icons/uni-icons-create-component',
+    {
+        'components/uni-ui/lib/uni-icons/uni-icons-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('2')['createComponent'](__webpack_require__(479))
+        })
+    },
+    [['components/uni-ui/lib/uni-icons/uni-icons-create-component']]
+]);
